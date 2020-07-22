@@ -1,0 +1,12 @@
+version: '3.7'
+
+services:
+  pdm-analytics:
+    container_name: arima
+    build: .
+    restart: always
+    networks:
+      - analyticsnet
+networks:
+  analyticsnet:
+    name: pdmsim_simnet
