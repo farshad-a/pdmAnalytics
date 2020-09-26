@@ -1,0 +1,38 @@
+{
+  "mysql": {
+    "config": {
+      "user": "root",
+      "password": "password",
+      "host": "127.0.0.1"
+    },
+    "database": {
+      "schema": "festo",
+      "linear_reg": {
+        "table_names": [
+          "storage",
+          "dosing",
+          "dosing"
+        ],
+        "columns": [
+          "storage",
+          "storage",
+          "total_production"
+        ],
+        "num_lr": 3,
+        "metadata": {
+          "pt_per_shift": 1000000,
+          "storage_upper_limit": 700,
+          "storage_lower_limit": 500,
+          "pt_prediction_secs_interval": 600
+        }
+      }
+    }
+  },
+  "mqtt": {
+    "host": "127.0.0.1",
+    "port": 1883,
+    "topics": {
+      "event_trigger": "/festo/actuation/new"
+    }
+  }
+}
