@@ -32,7 +32,13 @@
     "host": "127.0.0.1",
     "port": 1883,
     "topics": {
-      "event_trigger": "/festo/actuation/new"
+      "subscribe": {
+        "new_actuation": "/festo/actuation/new"
+      },
+      "publish": {
+        "reward_observation": "/festo/l4dc/rew_obs",
+        "analytics_info": "/festo/analytics/predictions"
+      }
     }
   }
 }
